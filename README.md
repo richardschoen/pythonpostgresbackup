@@ -19,7 +19,7 @@ Parameters
 ```--outputfile```=Output file for storing the pb_dump tar backup. Ex: /tmp/mybackup.tar   
    Special formatting keywords:   
    ```@@datetime``` or ```@@DATETIME``` - Replace with current date/time. 
-   Ex backup of --dbname mydb: /tmp/mydb-@@datetime.tar = /tmp/mydb-yyyymmdd-hhmmss.tar 
+   Ex backup of --dbname mydb: /tmp/mydb-@@datetime.tar = /tmp/mydb-yyyymmdd-hhmmss.tar   
    ```@@dbdatetime``` or ```@@DBDATETIME``` - Replace with database name and current date/time. 
    Ex backup of --dbname mydb: /tmp/@@dbdatetime.tar = /tmp/mydb-yyyymmdd-hhmmss.tar   
 
