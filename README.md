@@ -2,7 +2,7 @@
 This repository contains a PostgreSQL backup CLI utility written in Python. 
 This should work on IBM i or any other platforn.
 
-## Back up PostgreSQL database to TAR file
+## Back up PostgreSQL database to TAR file - pybackuppostgres.py
 This script will run pg_dump to backup a PostgreSQL database. 
 
 Parameters   
@@ -38,7 +38,7 @@ This example backs up over TCP port connection using the specified host name, po
 
 ```python3 pybackuppostgres.py --dbname=mydb  --dbport=5432 --outputfile=/tmp/mydb-@@datetime.tar  --replace=false --dbuser=postgres --dbpass=mypassword --dbhost=localhost```   
 
-## Restore PostgreSQL database from TAR file
+## Restore PostgreSQL database from TAR file - pyrestorepostgres.py
 This script will run pg_restore to restore a PostgreSQL database backup.
 
 Parameters   
