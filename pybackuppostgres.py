@@ -185,6 +185,14 @@ try: # Try to perform main logic
    
       # Check return code
       if (rtncmd != 0):
+         
+         # If output file was created and is 0 bytes. Remove it
+         if os.path.isfile(parmoutputfile):
+            file_stats = os.stat(parmoutputfile)
+            if (file_stats.st_size==0):
+               os.remove(parmoutputfile)
+               print(f"INFO:Removed 0 byte backup file {parmoutputfile} after processing.")
+
          raise Exception(f"Error {rtncmd} occurred while running pg_dump")
 
       # Run the tar verify command
